@@ -6,6 +6,7 @@ import * as favoritesView from './views/favorites.js';
 import * as planView from './views/plan.js';
 import * as shoppingView from './views/shopping.js';
 import * as inspirationView from './views/inspiration.js';
+import { initInstall } from './install.js';
 
 const ROUTES = [
   { re: /^\/$/, view: recipesView, tab: 'recepty', title: 'Recepty' },
@@ -111,4 +112,5 @@ async function start() {
   }
 }
 
+initInstall();
 start();
