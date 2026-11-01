@@ -4,6 +4,7 @@
   "description": "Recepty a jídelníček pro miminko",
   "lang": "cs",
   "dir": "ltr",
+  "id": "/mnamka/?app=mnamka",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

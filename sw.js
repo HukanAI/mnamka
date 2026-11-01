@@ -1,7 +1,7 @@
 /* Mňamka – service worker.
- * Shell: stale-while-revalidate, data JSON: network-first, obrázky: cache-first
+ * Shell: stale-while-revalidate, data JSON a manifest: network-first, obrázky: cache-first
  * (po načtení dat je appka předcachuje), videa: jen runtime cache při přehrání. */
-const VERSION = 'v4';
+const VERSION = 'v5';
 const SHELL_CACHE = `mnamka-shell-${VERSION}`;
 const DATA_CACHE = `mnamka-data-${VERSION}`;
 const IMG_CACHE = `mnamka-img-${VERSION}`;
@@ -32,7 +32,8 @@ const DATA = ['data/recipes.json', 'data/menus.json'];
 self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
     const shell = await caches.open(SHELL_CACHE);
-    await shell.addAll(SHELL);
+    // cache: 'reload' – nová verze nesmí převzít starou kopii z HTTP cache prohlížeče
+    await shell.addAll(SHELL.map((url) => new Request(url, { cache: 'reload' })));
     // Data mohou chybět (např. menus.json) – instalaci to nesmí shodit.
     const data = await caches.open(DATA_CACHE);
     await Promise.all(DATA.map(async (url) => {
@@ -88,6 +89,9 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(cacheFirst(req, IMG_CACHE));
   } else if (path.includes('/data/') && path.endsWith('.json')) {
     event.respondWith(networkFirst(req, DATA_CACHE));
+  } else if (path.endsWith('.webmanifest')) {
+    // Manifest vždy čerstvý ze sítě – podle něj prohlížeč rozhoduje o instalaci.
+    event.respondWith(networkFirst(req, SHELL_CACHE));
   } else {
     event.respondWith(staleWhileRevalidate(req, SHELL_CACHE, event));
   }
