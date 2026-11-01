@@ -2,15 +2,15 @@
   {
     "id": "lzickapolzicce-tyden-1",
     "title": "Týdenní jídelníček – 1. týden (26. 10. – 1. 11.)",
-    "note": "Jídelníček pro Mikyho (8 měsíců). Obědy cca 170–200 g. UM = umělé mléko.",
+    "note": "Jídelníček pro Mikyho (8 měsíců). Obědy cca 170–200 g (v pátek 170–210 g). UM = umělé mléko.",
     "source": { "author": "lzickapolzicce", "platform": "Instagram" },
     "images": ["media/img/IMG-20261101-WA0009.webp"],
     "days": [
       { "day": "Pondělí", "meals": { "snidane": "Chlebík s avokádem", "svacina1": "Ovesná kaše s jablkem a skořicí", "obed": "Krůtí maso, brambor, mrkev, brokolice (kmín)", "svacina2": "Hruška s jogurtem", "vecere": "UM" } },
-      { "day": "Úterý", "meals": { "snidane": "Chlebová kaše s pastiňákem a trochou kravského mléka", "svacina1": "Jáhlová kaše s mangem", "obed": "Losos, batát, dýně, cuketa", "svacina2": "Švestka s banánem", "vecere": "UM" } },
+      { "day": "Úterý", "meals": { "snidane": "Chlebová kaše s pastinákem a trochou kravského mléka", "svacina1": "Jáhlová kaše s mangem", "obed": "Losos, batát, dýně, cuketa", "svacina2": "Švestka s banánem", "vecere": "UM" } },
       { "day": "Středa", "meals": { "snidane": "Mléčná rýže s jablkem a skořicí", "svacina1": "Ovesná kaše s borůvkami", "obed": "Hovězí maso, těstoviny, rajče, mrkev", "svacina2": "Avokádo s hruškou", "vecere": "UM" } },
       { "day": "Čtvrtek", "meals": { "snidane": "Žloutková pěna s avokádem", "svacina1": "Krupicová kaše s hruškou", "obed": "Vepřové maso, brambor, dýně, cuketa", "svacina2": "Jablečno-jahodová přesnídávka", "vecere": "UM" } },
-      { "day": "Pátek", "meals": { "snidane": "Chlebík s domácí Lučinou", "svacina1": "Rýžová kaše s mangem", "obed": "Vepřové maso, kuskus, mrkev, pastiňák, kukuřice", "svacina2": "Banán s avokádem", "vecere": "UM" } },
+      { "day": "Pátek", "meals": { "snidane": "Chlebík s domácí Lučinou", "svacina1": "Rýžová kaše s mangem", "obed": "Vepřové maso, kuskus, mrkev, pastinák, kukuřice", "svacina2": "Banán s avokádem", "vecere": "UM" } },
       { "day": "Sobota", "meals": { "snidane": "Ovocná Lučina s meruňkou", "svacina1": "Jáhlová kaše se švestkou", "obed": "Kuřecí maso, rýže Arborio, cuketa, květák (kmín)", "svacina2": "Jablko s jogurtem", "vecere": "UM" } },
       { "day": "Neděle", "meals": { "snidane": "Zavádění bílku (1. den) – malé množství (cca ¼ lžičky) s avokádem", "svacina1": "Ovesná kaše s banánem", "obed": "Hovězí maso, brambor, mrkev, rajče", "svacina2": "Nektarinka s jogurtem", "vecere": "UM" } }
     ]
