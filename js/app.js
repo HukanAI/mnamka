@@ -108,6 +108,16 @@ async function start() {
   }
   render();
   if ('serviceWorker' in navigator) {
+    // Nová verze appky převzala stránku → jednou obnovit, ať se hned ukáže
+    // (při úplně první návštěvě controller není a obnovovat netřeba).
+    if (navigator.serviceWorker.controller) {
+      let reloaded = false;
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        if (reloaded) return;
+        reloaded = true;
+        location.reload();
+      });
+    }
     navigator.serviceWorker.register('sw.js').then(precacheImages).catch(() => {});
   }
 }
