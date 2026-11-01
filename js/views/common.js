@@ -129,7 +129,7 @@ export function openSheet(html, setup) {
   return dlg;
 }
 
-export const sheetHead = (title) => `<div class="sheet-head"><h2>${esc(title)}</h2>
+const sheetHead = (title) => `<div class="sheet-head"><h2>${esc(title)}</h2>
   <button type="button" class="icon-btn" data-close aria-label="Zavřít">${icons.close}</button></div>`;
 
 /** Dialog „Přidat do jídelníčku“: výběr dne a jídla. */

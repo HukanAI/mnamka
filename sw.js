@@ -1,7 +1,7 @@
 /* Mňamka – service worker.
  * Shell: stale-while-revalidate, data JSON: network-first, obrázky: cache-first
  * (po načtení dat je appka předcachuje), videa: jen runtime cache při přehrání. */
-const VERSION = 'v3';
+const VERSION = 'v4';
 const SHELL_CACHE = `mnamka-shell-${VERSION}`;
 const DATA_CACHE = `mnamka-data-${VERSION}`;
 const IMG_CACHE = `mnamka-img-${VERSION}`;
