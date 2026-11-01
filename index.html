@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Mňamka</title>
+  <meta name="description" content="Recepty a jídelníček pro miminko">
+  <meta name="theme-color" content="#fff8ee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#2a2420" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Mňamka">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/app.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-btn back-btn" id="back-btn" type="button" aria-label="Zpět" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <h1 class="topbar-title" id="page-title">Mňamka</h1>
+  </header>
+
+  <main id="view" class="view" tabindex="-1">
+    <p class="loading">Načítám recepty…</p>
+  </main>
+
+  <nav class="tabbar" aria-label="Hlavní navigace">
+    <a href="#/" data-tab="recepty">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/><path d="M9 8h7M9 12h5"/></svg>
+      <span>Recepty</span>
+    </a>
+    <a href="#/oblibene" data-tab="oblibene">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.6 7.6 3.9 4 7.4 4c2 0 3.4 1.1 4.6 2.7C13.2 5.1 14.6 4 16.6 4c3.5 0 5.8 3.6 4.6 7.1-1.7 4.8-9.2 9.4-9.2 9.4z"/></svg>
+      <span>Oblíbené</span>
+    </a>
+    <a href="#/jidelnicek" data-tab="jidelnicek">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M8 14h3M8 17h6"/></svg>
+      <span>Jídelníček</span>
+    </a>
+    <a href="#/nakup" data-tab="nakup">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2.2l2.3 11h11l2-8H6.4"/><circle cx="9.5" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
+      <span>Nákup</span>
+    </a>
+    <a href="#/inspirace" data-tab="inspirace">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/></svg>
+      <span>Inspirace</span>
+    </a>
+  </nav>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="loading">Mňamka potřebuje zapnutý JavaScript.</p></noscript>
+</body>
+</html>

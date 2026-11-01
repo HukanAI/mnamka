@@ -1,0 +1,9 @@
+# Původní screenshoty a videa – do appky jdou jen zpracované kopie v media/
+Obrazky/
+Videa/
+
+.claude/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
